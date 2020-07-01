@@ -1,0 +1,2 @@
+include ':app', ':collapsiblecalendarview2'
+rootProject.name='Strada'

@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".screens.document.AjoutDocument"
+    >
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_activity" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintVertical_bias="0.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="2dp"
+                app:cardUseCompatPadding="true"
+                app:contentPadding="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+                <EditText
+                    android:id="@+id/input_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:background="@null"
+                    android:drawableLeft="@drawable/ic_doc"
+                    android:drawablePadding="10dp"
+                    android:gravity="left"
+                    android:hint="@string/ajouter_le_nom_du_document"
+                    android:textColor="#323643"
+                    android:textColorHint="#323643"
+                    android:textSize="13sp"
+
+                    >
+
+
+                </EditText>
+
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/input_dateView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="24dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="2dp"
+                app:cardUseCompatPadding="true"
+                app:contentPadding="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardView">
+
+
+                <TextView
+                    android:id="@+id/input_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:drawableLeft="@drawable/ic_doc_cal"
+                    android:drawablePadding="10dp"
+                    android:gravity="left"
+                    android:hint="@string/date_d_ch_ance_du_document"
+                    android:textColor="#323643"
+                    android:textColorHint="#323643"
+                    android:textSize="13sp">
+
+
+                </TextView>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp">
+
+                <TextView
+                    android:id="@+id/tv_notification"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="26dp"
+                    android:text="@string/notification_d_ch_ance"
+                    android:textColor="@color/colorPrimaryBlue"
+                    android:textSize="15sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/input_dateView">
+
+
+                </TextView>
+
+
+                <Switch
+
+                    android:id="@+id/switch_notifications"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginEnd="24dp"
+                    android:gravity="end"
+                    android:theme="@style/SCBSwitch" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txtNotification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="26dp"
+                android:drawableLeft="@drawable/ic_info"
+                android:drawablePadding="5dp"
+                android:textColor="@color/colorPrimaryBlue"
+                android:textSize="13sp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/input_dateView" />
+
+            <ImageView
+                android:id="@+id/bt_add_document"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:src="@drawable/bg_add_document"
+
+                >
+
+
+            </ImageView>
+
+
+            <TextView
+                android:id="@+id/tv_add"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="24dp"
+                android:text="@string/vous_pouvez_ajouter_une_image_format_png_jepg_ou_bien_un_document_format_pdf"
+                android:textColor="#323643"
+                android:textSize="15sp">
+
+
+            </TextView>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+
+                >
+
+                <RelativeLayout
+                    android:id="@+id/document_picture_container"
+                    android:layout_width="0dp"
+                    android:layout_height="200dp"
+                    android:layout_weight="1"
+                    android:padding="10dp"
+                    android:visibility="gone">
+
+
+                    <ImageView
+                        android:id="@+id/iv_document1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"></ImageView>
+
+
+                    <ImageView
+                        android:id="@+id/iv_delete_document1"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentEnd="true"
+                        android:src="@drawable/ic_delete_document">
+
+                    </ImageView>
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/document_picture_container2"
+                    android:layout_width="0dp"
+                    android:layout_height="200dp"
+                    android:layout_weight="1"
+                    android:padding="10dp"
+
+                    android:visibility="gone">
+
+
+                    <ImageView
+                        android:id="@+id/iv_document2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"></ImageView>
+
+
+                    <ImageView
+                        android:id="@+id/iv_delete_document2"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentEnd="true"
+                        android:src="@drawable/ic_delete_document">
+
+                    </ImageView>
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/document_picture_container3"
+                    android:layout_width="0dp"
+                    android:layout_height="200dp"
+                    android:layout_weight="1"
+                    android:padding="10dp"
+                    android:visibility="gone">
+
+
+                    <ImageView
+                        android:id="@+id/iv_document3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp">
+
+                    </ImageView>
+
+
+                    <ImageView
+                        android:id="@+id/iv_delete_document3"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentEnd="true"
+                        android:src="@drawable/ic_delete_document">
+
+                    </ImageView>
+
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+            <Button
+                android:id="@+id/btnAddDocument"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="24dp"
+                android:background="@drawable/bg_btn"
+                android:text="@string/ajouter"
+                android:textColor="@color/white"
+                android:layout_marginBottom="30dp"
+                />
+
+            <Button
+                android:id="@+id/btnUpdate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="24dp"
+                android:background="@drawable/bg_btn_filter_g"
+                android:text="@string/mettre_jour"
+                android:textColor="@color/white"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/btnDelete"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="24dp"
+                android:background="@drawable/bg_btn_empty"
+                android:text="@string/supprimer"
+                android:textColor="@color/colorPrimaryBlue"
+                android:visibility="gone"
+                android:layout_marginBottom="30dp"
+                />
+        </LinearLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

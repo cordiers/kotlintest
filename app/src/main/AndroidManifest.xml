@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="fr.strada">
+
+    <uses-permission android:name = "android.permission.VIBRATE" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <uses-feature
+        android:name="android.hardware.usb.host"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <application
+        android:name=".StradaApp"
+        android:allowBackup="true"
+        android:icon="${icon_name}"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/StradaAppThemeBlue"
+        android:requestLegacyExternalStorage="true"
+        tools:replace="android:theme"
+        tools:ignore="AllowBackup,GoogleAppIndexingWarning"
+        android:grantUriPermissions="true"
+        android:usesCleartextTraffic="true"
+        >
+        <activity android:name=".screens.notifications.NotificationsSettingsActivity"></activity>
+        <activity android:name=".screens.notifications.NotificationsActivity" />
+        <activity
+            android:name=".screens.UnderConstractionActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity
+            android:name=".screens.auth.AuthentificationActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity
+            android:name=".screens.auth.SignInActivity"
+            android:screenOrientation="portrait"
+            tools:node="replace">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data
+                    android:host="@string/com_auth0_domain"
+                    android:pathPrefix="/android/fr.strada/callback"
+                    android:scheme="https" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".screens.splash.SplachScreenActivity"
+            android:screenOrientation="portrait"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <!-- For sharing File -->
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="application/octet-stream" />
+            </intent-filter>
+            <!-- For opening File -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:host="*"/>
+                <data android:mimeType="*/*"/>
+                <data android:pathPattern=".*\\.DDD"/>
+                <data android:pathPattern=".*\\.Ddd"/>
+                <data android:pathPattern=".*\\.ddd"/>
+                <data android:pathPattern=".*\\.TGD"/>
+                <data android:pathPattern=".*\\.Tgd"/>
+                <data android:pathPattern=".*\\.tgd"/>
+                <data android:pathPattern=".*\\.C1B"/>
+                <data android:pathPattern=".*\\.C1b"/>
+                <data android:pathPattern=".*\\.c1b"/>
+                <data android:pathPattern=".*\\.c1B"/>
+                <data android:scheme="file"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="*/*"/>
+                <data android:pathPattern=".*\\.DDD"/>
+                <data android:pathPattern=".*\\.Ddd"/>
+                <data android:pathPattern=".*\\.ddd"/>
+                <data android:pathPattern=".*\\.TGD"/>
+                <data android:pathPattern=".*\\.Tgd"/>
+                <data android:pathPattern=".*\\.tgd"/>
+                <data android:pathPattern=".*\\.C1B"/>
+                <data android:pathPattern=".*\\.C1b"/>
+                <data android:pathPattern=".*\\.c1b"/>
+                <data android:pathPattern=".*\\.c1B"/>
+                <data android:pathPattern="/external/file/.*"/>
+                <data android:host="*"/>
+                <data android:scheme="content"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:host="*"/>
+                <data android:mimeType="*/*"/>
+                <data android:pathPattern=".*\\.DDD"/>
+                <data android:pathPattern=".*\\.Ddd"/>
+                <data android:pathPattern=".*\\.ddd"/>
+                <data android:pathPattern=".*\\.TGD"/>
+                <data android:pathPattern=".*\\.Tgd"/>
+                <data android:pathPattern=".*\\.tgd"/>
+                <data android:pathPattern=".*\\.C1B"/>
+                <data android:pathPattern=".*\\.C1b"/>
+                <data android:pathPattern=".*\\.c1b"/>
+                <data android:pathPattern=".*\\.c1B"/>
+                <data android:scheme="https"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:host="*"/>
+                <data android:mimeType="*/*"/>
+                <data android:pathPattern=".*\\.DDD"/>
+                <data android:pathPattern=".*\\.Ddd"/>
+                <data android:pathPattern=".*\\.ddd"/>
+                <data android:pathPattern=".*\\.TGD"/>
+                <data android:pathPattern=".*\\.Tgd"/>
+                <data android:pathPattern=".*\\.tgd"/>
+                <data android:pathPattern=".*\\.C1B"/>
+                <data android:pathPattern=".*\\.C1b"/>
+                <data android:pathPattern=".*\\.c1b"/>
+                <data android:pathPattern=".*\\.c1B"/>
+                <data android:scheme="http"/>
+            </intent-filter>
+
+
+        </activity>
+
+        <activity
+            android:name=".screens.home.MainActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden"
+            >
+            <intent-filter>
+                <action android:name="android.hardware.usb.action.ACTION_USB_DEVICE_ATTACHED" />
+                <action android:name="android.hardware.usb.action.ACTION_USB_DEVICE_DETACHED" />
+            </intent-filter>
+
+
+
+        </activity>
+        <activity
+            android:name=".screens.home.ReaderActivityBluetoothKotlin"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|keyboardHidden"
+            >
+        </activity>
+
+        <activity
+            android:name=".screens.home.ReaderActivityKotlin"
+            android:screenOrientation="portrait"
+            >
+            <intent-filter>
+                <action android:name="android.hardware.usb.action.ACTION_USB_DEVICE_ATTACHED" />
+                <action android:name="android.hardware.usb.action.ACTION_USB_DEVICE_DETACHED" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".screens.document.AjoutDocument"
+            android:screenOrientation="portrait"
+            />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.file"
+            android:exported="false"
+            android:grantUriPermissions="true"
+            >
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <meta-data
+            android:name="firebase_crashlytics_collection_enabled"
+            android:value="false" />
+
+        <service
+            android:name=".screens.notifications.notifications.EndlessService"
+            android:enabled="true"
+            android:exported="false">
+        </service>
+
+        <receiver android:enabled="true" android:name=".screens.notifications.broadcast_receivers.StartReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+
+
+        <activity
+            android:name="com.auth0.android.lock.LockActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data
+                    android:host="@string/com_auth0_domain"
+                    android:pathPrefix="/android/fr.strada/callback"
+                    android:scheme="app" />
+            </intent-filter>
+        </activity>
+
+        <receiver
+            android:name=".screens.notifications.notifications.DailyNotificationReceiver"
+            android:enabled="true"
+            android:exported="true"
+            >
+        </receiver>
+
+        <receiver android:name=".screens.notifications.notifications.ChangeTimeZoneReceiver"
+            android:enabled="true"
+            android:exported="true"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+                <action android:name="android.intent.action.TIME_SET" />
+            </intent-filter>
+        </receiver>
+
+    </application>
+
+</manifest>

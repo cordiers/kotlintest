@@ -1,0 +1,75 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <include android:id="@+id/toolbar" layout="@layout/toolbar_notif"/>
+
+    <LinearLayout
+        android:id="@+id/layout_empty_not"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_centerInParent="true"
+        android:visibility="visible"
+        >
+
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/ic_empty_not"
+            >
+
+
+        </ImageView>
+
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/pas_de_nouvelles_notifications"
+            android:textColor="#354360"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView"></TextView>
+
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/toutes_les_nouvelles_notifications_apparaitront_ici"
+            android:textColor="#354360"
+            >
+
+
+        </TextView>
+    </LinearLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:paddingBottom="70dp"
+        android:paddingTop="30dp"
+        android:clipToPadding="false"
+        android:id="@+id/rv_notification"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:visibility="invisible"
+        android:layout_below="@id/toolbar"
+        />
+
+
+
+
+
+</RelativeLayout>

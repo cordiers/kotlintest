@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@+id/ll"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="horizontal"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@+id/txtTimeStart"
+        android:layout_width="match_parent"
+        android:text="00:00"
+        android:textColor="@color/colorPrimaryBlue"
+        android:textSize="12sp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:padding="5dp"
+        android:layout_height="27dp"
+        />
+    <TextView android:id="@+id/txtTime"
+        android:layout_width="match_parent"
+        android:text="00:00"
+        android:textColor="@color/colorPrimaryBlue"
+        android:textSize="12sp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:layout_marginStart="1dp"
+        android:layout_height="27dp"
+        />
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imgIcActivity"
+        android:layout_width="match_parent"
+        android:layout_height="27dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:layout_marginStart="1dp"
+        />
+    <TextView
+        android:id="@+id/txtVehicule"
+        android:layout_width="match_parent"
+        android:text=""
+        android:textColor="@color/colorPrimaryBlue"
+        android:textSize="10sp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:layout_marginStart="1dp"
+        android:layout_height="27dp"
+        />
+</LinearLayout>

@@ -1,0 +1,54 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="StradaAppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimaryBlue</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDarkBlue</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+
+    <style name="StradaAppThemeBlue" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimaryBlue</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDarkBlue</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppBottomSheetDialogTheme"
+        parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/AppModalStyle</item>
+    </style>
+
+    <style name="AppModalStyle"
+        parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/rounded_dialog</item>
+    </style>
+
+    <style name="AppBottomSheetDialogThemeTransparent"
+        parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/AppModalStyleTransparent</item>
+    </style>
+
+    <style name="AppModalStyleTransparent"
+        parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/transparent_dialog</item>
+    </style>
+
+    <style name="SCBSwitch" parent="Theme.AppCompat.Light">
+        <!-- active thumb & track color (30% transparency) -->
+        <item name="colorControlActivated">@color/colorPrimaryBlue</item>
+
+    </style>
+
+    <style name="MyTheme" parent="Lock.Theme">
+            <item name="Auth0.HeaderLogo">@drawable/ic_logo_dark</item>
+            <item name="Auth0.HeaderTitle">@string/app_name</item>
+            <item name="Auth0.HeaderTitleColor">@color/com_auth0_lock_text</item>
+            <item name="Auth0.HeaderBackground">@color/com_auth0_lock_header_background</item>
+            <item name="Auth0.PrimaryColor">@color/colorPrimaryBlue</item>
+            <item name="Auth0.DarkPrimaryColor">@color/colorPrimaryDarkBlue</item>
+    </style>
+
+</resources>

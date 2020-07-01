@@ -1,0 +1,187 @@
+apply plugin: 'com.android.application'
+//apply plugin: 'org.sonarqube'
+
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'io.fabric'
+
+apply plugin: 'realm-android'
+apply plugin: 'com.google.gms.google-services'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.2"
+    defaultConfig {
+        applicationId "fr.strada"
+        minSdkVersion 21
+        targetSdkVersion 29
+        versionCode 5
+        versionName "1.8.5"
+        testInstrumentationRunner "androidx.activity_sign_in.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+        manifestPlaceholders = [auth0Domain: "@string/com_auth0_domain", auth0Scheme: "app"]
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments << ["dagger.gradle.incremental": "true"]
+            }
+        }
+    }
+
+    signingConfigs {
+        release {
+            storeFile file("./strada.jks")
+            keyAlias 'strada'
+            storePassword 'devstarda'
+            keyPassword 'devstrada'
+        }
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+    }
+    flavorDimensions "mode"
+    productFlavors {
+        versionProd {
+            dimension "mode"
+            applicationId "fr.strada"
+            versionCode 5
+            versionName "1.8.5"
+            multiDexEnabled true
+            resValue "string", "app_name", "Strada Driver"
+            resValue "string", "isVersionTest", "false"
+            manifestPlaceholders = [icon_name:"@mipmap/ic_launcher_jaune"]
+        }
+
+        versionTest {
+            dimension "mode"
+            applicationId "fr.strada.test"
+            versionCode 5
+            versionName "1.8.5"
+            multiDexEnabled true
+            resValue "string", "app_name", "Strada Driver Test"
+            resValue "string", "isVersionTest", "true"
+            manifestPlaceholders = [icon_name:"@mipmap/ic_launcher_blue"]
+        }
+    }
+
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+
+    /*
+    sonarqube {
+        properties {
+            property "sonar.projectName", "strada-mobile-android"
+            property "sonar.projectKey", "strada-mobile-android"
+            property "sonar.host.url", "http://sonarqube.addinn.com"
+            property "sonar.language", "java"
+            property "sonar.sources", "src/main/"
+            property "sonar.login", "15f0f69e77126df4b595e77850d2dfb74e817f57"
+        }
+    }
+    */
+
+    applicationVariants.all { variant ->
+        variant.outputs.all { output ->
+            def project = "Strada"
+            def SEP = "_"
+            def flavor = variant.productFlavors[0].name
+            //def buildType = variant.variantData.variantConfiguration.buildType.name
+            def version = variant.versionName
+            def date = new Date();
+            def formattedDate = date.format('MM-dd-yyyy')
+
+            def newApkName = project + SEP + flavor + /* SEP + buildType +*/SEP + version + SEP + formattedDate + SEP + ".apk"
+
+            outputFileName = new File(newApkName)
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    aaptOptions.cruncherEnabled = false
+    aaptOptions.useNewCruncher = false
+
+    lintOptions {
+        disable 'MissingTranslation'
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.core:core-ktx:1.1.0'
+
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+
+    implementation 'com.google.firebase:firebase-core:17.2.2'
+    implementation 'com.google.firebase:firebase-database:19.2.0'
+    implementation 'com.google.firebase:firebase-analytics:17.2.2'
+    implementation 'com.crashlytics.sdk.android:crashlytics:2.10.1'
+
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'com.google.android.material:material:1.1.0-alpha09'
+    implementation 'de.hdodenhof:circleimageview:3.0.0'
+    implementation 'com.github.JakeWharton:ViewPagerIndicator:2.4.1'
+    implementation 'com.jakewharton.timber:timber:4.7.1'
+    implementation 'com.ramijemli.percentagechartview:percentagechartview:0.3.1'
+    implementation 'com.akexorcist:RoundCornerProgressBar:2.0.3'
+    implementation 'com.karumi:dexter:6.0.0'
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation 'com.github.arman-sar:SwipeLayout:1.1.1'
+
+
+    //RestApi
+    implementation 'com.squareup.retrofit2:retrofit:2.6.1'
+    implementation 'com.squareup.retrofit2:converter-gson:2.6.1'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.12.1'
+    implementation 'com.google.code.gson:gson:2.8.5'
+    implementation 'com.squareup.retrofit2:converter-scalars:2.6.1'
+    implementation project(path: ':collapsiblecalendarview2')
+
+    implementation 'com.google.guava:guava:24.1-jre'
+
+    implementation 'com.shawnlin:number-picker:2.4.8'
+
+    implementation "androidx.preference:preference-ktx:1.1.0"
+
+    implementation group: 'commons-codec', name: 'commons-codec', version: '1.12'
+    implementation 'com.getbase:floatingactionbutton:1.10.1'
+    implementation 'com.github.TutorialsAndroid:FilePicker:v6.0.19'
+
+    implementation 'me.aflak.libraries:bluetooth:1.3.9'
+
+    implementation "androidx.lifecycle:lifecycle-extensions:2.2.0"
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.0'
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.2.0-alpha01"
+
+    //auth0
+    implementation 'com.auth0.android:auth0:1.20.1'
+    implementation 'com.auth0.android:lock:2.17.1'
+
+    // Required -- JUnit 4 framework
+    testImplementation 'junit:junit:4.12'
+    // Optional -- Robolectric environment
+    testImplementation 'androidx.test:core:1.2.0'
+    // Optional -- Mockito framework
+    testImplementation 'org.mockito:mockito-core:1.10.19'
+    implementation 'io.reactivex:rxjava:1.1.0'
+}

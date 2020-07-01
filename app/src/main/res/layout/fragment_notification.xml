@@ -1,0 +1,31 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+   >
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:textSize="30sp"
+        android:background="@color/white"
+        android:textColor="#000"
+        android:text="Home" />
+
+    <Button
+        android:id="@+id/btnLogOut"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/logout"
+        android:textColor="@color/white"
+        android:background="@drawable/bg_btn"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="25dp"
+        android:visibility="invisible"
+        />
+
+</RelativeLayout>

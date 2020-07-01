@@ -1,0 +1,75 @@
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/container_body"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="57dp"
+            android:layout_weight="1"
+            app:layout_constraintTop_toBottomOf="@+id/container_toolbar"
+            tools:ignore="MissingConstraints" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floatingActionButtonSettings"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="32dp"
+            android:backgroundTint="#ffffff"
+            android:src="@drawable/ic_fillter"
+            app:layout_constraintEnd_toEndOf="@+id/container_toolbar"
+            app:layout_constraintTop_toTopOf="parent"
+            android:clickable="true"
+            android:focusable="true"
+            android:visibility="invisible"
+            app:rippleColor="@color/white"
+            android:background="@color/white"
+            android:outlineSpotShadowColor="@color/white"
+            android:outlineAmbientShadowColor="@color/white"
+            app:backgroundTint="@color/white"
+            />
+
+        <LinearLayout
+            android:id="@+id/container_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <include
+                android:id="@+id/toolbar"
+                layout="@layout/toolbar" />
+
+        </LinearLayout>
+
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="58dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <fragment
+        android:id="@+id/fragment_navigation_drawer"
+        android:name="fr.strada.screens.home.fragments.DrawerFragment"
+        android:layout_width="260dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:layout="@layout/fragment_drawer"
+        tools:layout="@layout/fragment_drawer" />
+
+</androidx.drawerlayout.widget.DrawerLayout>

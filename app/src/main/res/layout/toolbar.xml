@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/toolbars"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:minHeight="?attr/actionBarSize"
+    android:background="@drawable/bg_toolbar"
+    local:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+    local:popupTheme="@style/ThemeOverlay.AppCompat.Light" >
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_logo"
+        android:layout_marginBottom="100dp"
+        android:id="@+id/imgLogo"
+        android:visibility="visible"
+         />
+
+    <LinearLayout android:id="@+id/rlTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        >
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginBottom="100dp"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:id="@+id/txttitle"
+            />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/dropdown"
+            android:layout_marginStart="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_droparrow"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:layout_marginBottom="5dp"
+            />
+    </LinearLayout>
+
+
+    <RelativeLayout android:id="@+id/rlIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center|end"
+        android:layout_marginBottom="15dp"
+        android:layout_marginEnd="10dp"
+        >
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/btnIconToolbar"
+            android:layout_width="35dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_notifications"
+            android:layout_centerInParent="true"
+            />
+        <TextView android:id="@+id/txtdateJour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@color/colorPrimaryBlue"
+            />
+    </RelativeLayout>
+
+</androidx.appcompat.widget.Toolbar>

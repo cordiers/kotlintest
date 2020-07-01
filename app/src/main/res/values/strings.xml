@@ -1,0 +1,291 @@
+<resources>
+
+
+    <string name="com_auth0_client_id" translatable="false">s8PO4swTa7b42Kj0BhaozpF8514vyENQ</string>
+    <string name="com_auth0_domain" translatable="false" >strada.eu.auth0.com</string>
+    <!--
+     <string name="com_auth0_client_id" translatable="false">nvfI0Ca9eRTs53FUh3y6ALJP6obYyUqM</string>
+     <string name="com_auth0_domain" translatable="false" >ihebfarhani.eu.auth0.com</string>
+    -->
+    <string name="com_auth0_lock_action_sign_up">inscrire</string>
+    <string name="com_auth0_lock_action_log_in">S’identifier</string>
+    <string name="com_auth0_lock_mode_sign_up">inscrire</string>
+    <string name="com_auth0_lock_mode_log_in">S’identifier</string>
+    <string name="com_auth0_lock_action_forgot_password">Vous ne vous souvenez pas de votre mot de passe?</string>
+
+    <string name="com_auth0_lock_hint_email">Email</string>
+    <string name="com_auth0_lock_hint_password">Mot de passe</string>
+
+    <string name="com_auth0_lock_input_error_email">Adresse e-mail invalide</string>
+    <string name="com_auth0_lock_input_error_password">Mot de passe invalide</string>
+
+
+    <string name="com_auth0_lock_db_login_error_invalid_credentials_message">E-MAIL OU MOT DE PASSE INCORRECT</string>
+
+
+    <!--<string name="app_name">Strada Driver</string>-->
+    <string name="bienvenue">Bienvenue</string>
+    <string name="scan">Lecture de carte</string>
+    <string name="s_identifier">S’identifier</string>
+
+    <string name="label_msg1">Identifiez vous pour consulter l’historique \n de vos lectures de carte</string>
+    <string name="label_msg2">Consultez vos documents personnels</string>
+    <string name="date_de_naissance">Date de naissance</string>
+    <string name="n_de_t_l_phone">N° de téléphone</string>
+    <string name="email">Email</string>
+
+    <string name="input_error_required">Champs obligatoires</string>
+    <string name="input_error_email">Adresse e-mail invalide</string>
+    <string name="input_error">entrées invalides</string>
+    <string name="waiting_for_card">Waiting for Card</string>
+    <string name="card_present">Carte Présente</string>
+    <string name="getting_data">Acquisition des données</string>
+
+    <string name="state_comm_error">Erreur de communication! Retirez la carte!</string>
+    <string name="state_connect_card_reader">Connecter le lecteur de carte</string>
+    <string name="state_grant_refused">Demande d’autorisation refusée</string>
+    <string name="state_grant_usb_device">Autoriser l’utilisation de l’outil USB</string>
+    <string name="state_insert_driver_card">Insérer la carte conducteur dans le lecteur</string>
+    <string name="state_reading">Lecture de carte en cours</string>
+    <string name="state_remove_driver_card">Retirer la carte du lecteur!</string>
+    <string name="state_use_driver_card">La carte inséré est incompatible !! Veuillez la retirer</string>
+
+    <string name="se_souvenir_de_moi">Se souvenir de moi</string>
+    <string name="scanner_les_donnees">Lecture de carte</string>
+    <string name="ajouter_des_documents">Ajouter des documents</string>
+    <string name="drawer_open">ouvrir</string>
+    <string name="drawer_close">fermer</string>
+    <string name="conduite">Conduite</string>
+    <string name="travail">Travail</string>
+    <string name="mad">M.A.D</string>
+    <string name="service">Service</string>
+    <string name="coupure">Coupure</string>
+    <string name="nuit">Nuit</string>
+
+    <array name="menu">
+        <item>Accueil</item>
+        <item>Lecture de carte</item>
+        <item>Activités</item>
+        <item>Documents</item>
+        <item>Profil</item>
+        <item>Réglages</item>
+        <item>À propos</item>
+    </array>
+
+    <array name="menuScan">
+        <item>Accueil</item>
+        <item>Lecture de carte</item>
+        <item>Activités</item>
+        <item>Réglages</item>
+        <item>À propos</item>
+    </array>
+
+    <string name="loader_message">Veuillez patienter…</string>
+    <string name="loader_title">Chargement</string>
+    <string name="logout">se deconnecter</string>
+    <string name="francais">Francais</string>
+    <string name="anglais">Anglais</string>
+    <string name="espagnol">Espagnol</string>
+    <string name="ajouter_le_nom_du_document">Ajouter le nom du document</string>
+    <string name="date_d_ch_ance_du_document">Date d’échéance du document</string>
+    <string name="vous_pouvez_ajouter_une_image_format_png_jepg_ou_bien_un_document_format_pdf">Vous pouvez ajouter une image format PNG,JPEG ou bien un document format PDF</string>
+    <string name="ajouter">Ajouter</string>
+    <string name="lecture_termine">Lecture Terminée</string>
+    <string name="termin">TERMINER</string>
+
+
+    <string name="about_msg">À sa création STRADA ciblait essentiellement le secteur du transport. Elle s’adresse aujourd’hui à toute société possédant une flotte de véhicules : VL, VU, PL, engins de chantier, autocars…
+
+                \n \n Pour cela, 3 gammes de produits ont été développées : la gestion des temps, l’informatique embarquée et la gestion d’exploitation. \n \n
+
+Composée de 44 collaborateurs, STRADA a su s’imposer sur le marché français et espagnol.</string>
+    <string name="en_r_sum">En résumé</string>
+    <string name="prochaines_ch_ances">Prochaines échéances</string>
+    <string name="permis_de_conduite">Permis de Conduite</string>
+    <string name="notification_d_ch_ance">Notification d’échéance</string>
+    <string name="mettre_jour">mettre à jour</string>
+    <string name="supprimer">supprimer</string>
+    <string name="filtre">Filtre</string>
+    <string name="date_d_ch_ance">Date d’échéance</string>
+    <string name="alphab_tique">Alphabétique</string>
+    <string name="a_z"><![CDATA[A -> Z]]></string>
+    <string name="z_a"><![CDATA[Z -> A]]></string>
+    <string name="camera">Appareil photo</string>
+    <string name="gallerie">Galerie</string>
+    <string name="document">Documents</string>
+    <string name="annuler">Annuler</string>
+    <string name="message_d_avertissement">Message d\'avertissement</string>
+    <string name="cette_version_de_strada_driver_est_en_cours_de_d_veloppement_par_cons_quent_certaines_fonctionnalit_s_ne_sont_pas_encore_disponibles_n_merci_de_votre_compr_hension_gardez_un_oeil_sur_les_mises_jour">Cette version de Strada Driver est en cours de développement, par conséquent certaines fonctionnalités ne sont pas encore disponibles.   Merci de votre compréhension. Gardez un oeil sur les mises à jour!</string>
+    <string name="j_ai_compris">J\'ai compris</string>
+    <string name="d_tection_d_une_nouvelle_carte">Détection d\'une nouvelle carte</string>
+    <string name="nous_avons_d_tect_que_vous_avez_ins_rer_une_nouvelle_carte_dont_le_num_ro_de_carte_ne_correspond_pas">nous avons détecté que vous avez insérer une nouvelle carte dont le numéro de carte ne correspond pas</string>
+    <string name="arr_ter_la_lecture">arrêter la lecture</string>
+    <string name="continuer_la_lecture">continuer la lecture</string>
+    <string name="d_tection_d_un_lecteur">Détection d\'un lecteur</string>
+    <string name="nous_avons_d_tect_le_branchement_d_un_lecteur_de_carte_souhaitez_vous_d_marrer_la_lecture_de_carte_imm_diatement">Nous avons détecté le branchement d’un lecteur de carte. Souhaitez-vous démarrer la lecture de carte immédiatement ?</string>
+    <string name="d_marrer_la_lecture">Démarrer la lecture</string>
+    <string name="choisir_l_utc">Choisir l’ UTC</string>
+    <string name="se_d_connecter">Se déconnecter</string>
+    <string name="en_cliquant_sur_valider_toutes_les_donn_es_relatives_au_compte_seront_effac_es">En cliquant sur valider, toutes les données relatives au compte seront effacées</string>
+    <string name="valider">Valider</string>
+    <string name="ajouter_une_notification">Ajouter une notification</string>
+    <string name="jour_s_avant_expiration">Jour(s) avant expiration</string>
+    <string name="pour_commencer">Pour commencer</string>
+    <string name="choisir_l_ann_e">Choisir l’Année</string>
+    <string name="version_b_ta">Version bêta</string>
+    <string name="hebdomadaire">Hebdomadaire</string>
+    <string name="mensuel">Mensuel</string>
+    <string name="pas_de_nouveaux_fichiers">Pas de nouveaux fichiers</string>
+    <string name="tous_les_nouveaux_documents_appara_tront_ici">Tous les nouveaux documents apparaîtront ici</string>
+    <string name="heure_d_but">Heure début</string>
+    <string name="dur_e">Durée</string>
+    <string name="activit">Activité</string>
+    <string name="v_hicule">Véhicule</string>
+    <string name="ajouter_un_commentaire">Ajouter un commentaire</string>
+    <string name="pas_de_nouvelles_lectures">Pas de nouvelles lectures</string>
+    <string name="tous_les_historiques_de_lecture_appara_tront_ici">Tous les historiques de lecture apparaîtront ici</string>
+    <string name="enregistrer">ENREGISTRER</string>
+    <string name="notifications">Notifications</string>
+    <string name="changer_de_langue">Changer de Langue</string>
+    <string name="fuseau_horaire">Fuseau horaire</string>
+    <string name="r_gler_manuellement">Régler manuellement</string>
+    <string name="heure_locale">Heure Locale</string>
+    <string name="les_donn_es_sont_sauvegard_es_en_utc">* les données sont sauvegardées en UTC</string>
+    <string name="format_des_heures_cumul_es">Format des heures cumulées</string>
+    <string name="hh_mm_heures_et_minutes">HH:MM (heures et minutes)</string>
+    <string name="hh_h_heures_et_centi_mes">HH,H (heures et centièmes)</string>
+    <string name="premier_jour_de_semaine">Premier jour de semaine</string>
+    <string name="lundi">Lundi</string>
+    <string name="dimanche">Dimanche</string>
+    <string name="p_riode_de_nuit">Période de nuit</string>
+    <string name="de">De</string>
+    <string name="a">à</string>
+    <string name="effacer_les_donn_es">Effacer les données</string>
+    <string name="ajout_document">Ajout Document</string>
+    <string name="heures_ete_hiver">Heures été/hiver</string>
+    <string name="decalage_heures_ete">Décalage heures d\'été</string>
+    <string name="mn">min</string>
+    <string name="heure_notifications">Heure de notifications</string>
+    <string name="active">Activées</string>
+    <string name="desactive">Désactivé</string>
+    <string name="choisir_decalage">Choisir</string>
+    <string name="entreprises">Entreprises</string>
+    <string name="me_demander_a_chaque_envoi_de_c1b">Me demander à chaque envoi de fichier</string>
+    <string name="mon_abonnement">Mon abonnement</string>
+    <string name="statut">Statut</string>
+    <string name="abonnement">Abonnement</string>
+    <string name="prochaine_echeance">Prochaine échéance</string>
+    <string name="m_abonner">M\'abonner</string>
+    <string name="info_personnel">Info personnel</string>
+    <string name="numero_de_carte">Numéro de carte</string>
+    <string name="nom">Nom</string>
+    <string name="prenom">Prénom</string>
+    <string name="recuperation_de_donnees">récupération de données</string>
+    <string name="version_beta">Version bêta</string>
+    <string name="votre_carte_arrivera_a_echeance_le">Votre carte  arrivera à échéance le </string>
+    <string name="dernier_dechargement_de_carte_le">Dernier déchargement de carte le</string>
+    <string name="jour_restant">jour restant</string>
+    <string name="jours_restants">jours restants</string>
+    <string name="jour_de_retard">jour de retard</string>
+    <string name="jours_de_retard">jours de retard</string>
+
+    <string name="janvier">Janvier</string>
+    <string name="fevrier">Février</string>
+    <string name="mars">Mars</string>
+    <string name="avril">Avril</string>
+    <string name="mai">Mai</string>
+    <string name="juin">Juin</string>
+    <string name="juillet">Juillet</string>
+    <string name="aout">Août</string>
+    <string name="septembre">Septembre</string>
+    <string name="octobre">Octobre</string>
+    <string name="novembre">Novembre</string>
+    <string name="decembre">Décembre</string>
+
+    <string name="pas_de_nouvelles_notifications">Pas de nouvelles notifications</string>
+    <string name="toutes_les_nouvelles_notifications_apparaitront_ici">Toutes les nouvelles notifications apparaîtront ici</string>
+    <string name="reglages_des_notifications">Réglages des notifications</string>
+    <string name="delais_d_avertissement_avant_l_echeance_de_dechargement">Délai d\'avertissement avant l\'échéance de déchargement</string>
+    <string name="reglage_du_delais_d_avertissement_avant_l_echeance_de_la_carte">Réglage du délai d\'avertissement avant l\'échéance de la carte</string>
+
+    <string name="lecture_de_la_carte">Lecture de la carte</string>
+    <string name="erreur_de_lecture_du_fichier">Erreur de lecture du fichier</string>
+    <string name="selectionner_un_fichier">Sélectionner un fichier</string>
+
+
+    <array name="month_name">
+        <item>janv.</item>
+        <item>févr.</item>
+        <item>mars</item>
+        <item>avr.</item>
+        <item>mai</item>
+        <item>juin</item>
+        <item>juill.</item>
+        <item>août</item>
+        <item>sept.</item>
+        <item>oct.</item>
+        <item>nov.</item>
+        <item>déc.</item>
+    </array>
+
+
+    <string name="semaine">Semaine</string>
+    <string name="repos">Repos</string>
+    <string name="a_propos">À propos</string>
+
+    <string name="vous_ne_pouvez_plus_ajouter_de_photos">Vous ne pouvez plus ajouter de photos</string>
+    <string name="vous_ne_pouvez_plus_ajouter_de_document">Vous ne pouvez plus ajouter de document</string>
+    <string name="le_document_a_ete_ajoute_avec_succes">Le document a été ajouté avec succès</string>
+    <string name="veuillez_selectionner_un_document_depuis_votre_memoire_interne">Veuillez sélectionner un document depuis votre mémoire interne</string>
+    <string name="aucun_fichier_n_est_ajoute">Aucun fichier n\'est ajouté</string>
+    <string name="mettez_votre_nom_de_document">Mettez votre nom de document</string>
+    <string name="mettez_votre_date_d_echeance_du_document">Mettez votre date d\'échéance du document</string>
+    <string name="veuillez_remplir_tous_les_champs">Veuillez remplir tous les champs</string>
+    <string name="une_autorisation_de_stockage_est_requise_pour_prendre_une_photo">Une autorisation de stockage est requise pour prendre une photo</string>
+
+    <string name="jours_avant">jours avant</string>
+    <string name="document_supprimee">document supprimée</string>
+    <string name="notification_automatique">Notification automatique</string>
+    <string name="jours_avant_expiration">jours avant expiration</string>
+    <string name="profil">Profil</string>
+
+    <string name="reglages">Réglages</string>
+    <string name="le_format_selectionne_est_incorrect">Le format sélectionné est incorrect</string>
+
+    <string name="expire_aujourd_hui">expire aujourd’hui</string>
+
+    <string name="commentaire_supprime">commentaire supprimé</string>
+    <string name="notification_supprimee">Notification supprimée</string>
+
+    <string name="votre_document_arrive_a_echeance_dans">Votre document arrive á échéance dans</string>
+
+    <string name="jours">jours</string>
+
+    <string name="di">Di</string>
+    <string name="lu">Lu</string>
+    <string name="ma">Ma</string>
+    <string name="me">Me</string>
+    <string name="je">Je</string>
+    <string name="ve">Ve</string>
+    <string name="sa">Sa</string>
+
+    <string name="donnees_supprimees">Données Supprimées</string>
+    <string name="attention_le_document">Attention,  le document</string>
+    <string name="jour">jour</string>
+    <string name="expirera_dans">expirera dans</string>
+    <string name="attention_il_ne_vous_reste_que">Attention, il ne vous reste que</string>
+    <string name="jours_pour_decharger_votre_carte">jours pour décharger votre carte</string>
+    <string name="attention_votre_carte_conducteur_expirera_dans">Attention, votre carte conducteur expirera dans</string>
+    <string name="inserer_un_commentaire">insérer un commentaire</string>
+    <string name="utc">UTC</string>
+    <string name="reglage_de_telephone">Réglage de téléphone</string>
+    <string name="reglage_manuelle">Réglage manuel</string>
+
+    <string name="Precondition_Required_no_associated_driver">Condition préalable requise: conducteur non associé</string>
+    <string name="le_fichier_est_envoye_avec_succes">le fichier est envoyé avec succès</string>
+
+    <string name="Ilya_un_probleme_dans_ce_fichier_choisir_un_autre_fichier">Ilya un problème dans ce fichier , choisir un autre fichier</string>
+
+
+
+</resources>

@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".screens.notifications.NotificationsSettingsActivity">
+
+    <androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:local="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:minHeight="?attr/actionBarSize"
+        android:background="@drawable/bg_toolbar"
+        local:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        local:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        >
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/bntBack"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="start"
+            android:src="@drawable/ic_back"
+            android:layout_marginBottom="25dp"
+
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txttitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:layout_marginBottom="25dp"
+            android:text="@string/reglages_des_notifications"
+            />
+
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cdDelaisAvertissement"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:contentPadding="15dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="24dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="2dp"
+        app:cardUseCompatPadding="true"
+        >
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_gravity="center"
+
+                >
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/delais_d_avertissement_avant_l_echeance_de_dechargement"
+                    android:gravity="start|center"
+                    android:drawablePadding="10dp"
+                    android:drawableLeft="@drawable/ic_format_heures"
+                    android:textColor="#323643"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/imageView6"
+                    app:layout_constraintTop_toTopOf="parent">
+                </TextView>
+
+                <ImageView
+                    android:id="@+id/txtDelaisAvertissement"
+                    android:layout_width="match_parent"
+                    android:layout_weight="6"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:src="@drawable/ic_arrow_down"
+                    android:padding="10dp"
+                    />
+
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llDelais"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp"
+                android:layout_marginTop="20dp"
+                android:visibility="gone"
+                android:background="@drawable/bg_edittext_g">
+
+                <Button
+                    android:layout_weight="1"
+                    android:id="@+id/decrement"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:background="@drawable/bg_btn"
+                    android:text="—"/>
+
+                <EditText
+                    android:layout_weight="1"
+                    android:id="@+id/display"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColor="@android:color/black"
+                    android:focusable="false"
+                    android:inputType="number"
+                    android:gravity="center"
+                    android:imeOptions="actionDone"
+                    android:background="@null"
+
+                    />
+                <Button
+                    android:layout_weight="1"
+
+                    android:id="@+id/increment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:background="@drawable/bg_btn"
+                    android:text="+"/>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cdDelaisAvertissementCarte"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:contentPadding="15dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="24dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="2dp"
+        app:cardUseCompatPadding="true"
+        >
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_gravity="center"
+
+                >
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/reglage_du_delais_d_avertissement_avant_l_echeance_de_la_carte"
+                    android:gravity="start|center"
+                    android:drawablePadding="10dp"
+                    android:drawableLeft="@drawable/ic_format_heures"
+                    android:textColor="#323643"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/imageView6"
+                    app:layout_constraintTop_toTopOf="parent">
+                </TextView>
+
+                <ImageView
+                    android:id="@+id/txtDelaisAvertissementCarte"
+                    android:layout_width="match_parent"
+                    android:layout_weight="6"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:src="@drawable/ic_arrow_down"
+                    android:padding="10dp"
+                    />
+
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llDelaisCarte"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp"
+                android:layout_marginTop="20dp"
+                android:visibility="gone"
+                android:background="@drawable/bg_edittext_g">
+
+                <Button
+                    android:layout_weight="1"
+                    android:id="@+id/decrementCarte"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:background="@drawable/bg_btn"
+                    android:text="—"/>
+
+                <EditText
+                    android:layout_weight="1"
+                    android:id="@+id/displayCarte"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColor="@android:color/black"
+                    android:focusable="false"
+                    android:inputType="number"
+                    android:gravity="center"
+                    android:imeOptions="actionDone"
+                    android:background="@null"
+
+                    />
+                <Button
+                    android:layout_weight="1"
+
+                    android:id="@+id/incrementCarte"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:background="@drawable/bg_btn"
+                    android:text="+"/>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+
+</LinearLayout>

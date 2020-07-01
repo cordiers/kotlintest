@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    app:contentPadding="10dp"
+    app:cardCornerRadius="10dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/transparent_dialog"
+        android:padding="5dp"
+        android:orientation="vertical">
+        <ImageView
+            android:id="@+id/btnExit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_exit"
+            android:layout_gravity="end"
+            android:padding="10dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_exit"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="@color/colorPrimaryBlue"
+            android:text="@string/d_tection_d_un_lecteur"
+            android:textSize="25dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:text="@string/nous_avons_d_tect_le_branchement_d_un_lecteur_de_carte_souhaitez_vous_d_marrer_la_lecture_de_carte_imm_diatement"
+            android:gravity="center"
+
+            />
+        <Button
+            android:id="@+id/btnScan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/d_marrer_la_lecture"
+            android:textColor="@color/white"
+            android:background="@drawable/bg_btn"
+            android:layout_marginTop="10dp"
+            />
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

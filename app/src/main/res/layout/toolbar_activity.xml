@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:minHeight="?attr/actionBarSize"
+    android:background="@drawable/bg_toolbar"
+    local:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+    local:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+
+    >
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/bntBack"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_gravity="start"
+        android:src="@drawable/ic_back"
+        android:layout_marginBottom="25dp"
+
+         />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txttitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textSize="22sp"
+        android:textColor="@color/white"
+        android:layout_marginBottom="25dp"
+        android:text="@string/ajout_document"
+        />
+
+
+
+</androidx.appcompat.widget.Toolbar>
